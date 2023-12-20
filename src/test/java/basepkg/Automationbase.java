@@ -13,7 +13,7 @@ public class Automationbase
 	public void setup() throws Exception 
 	{
 		driver=new ChromeDriver();
-		driver.get("https://www.meesho.com/auth?redirect=https%3A%2F%2Fwww.meesho.com%2F&source=profile&entry=header&screen=HP");
+		driver.get("https://www.meesho.com/");
 		
 		driver.manage().window().maximize();
 		//Thread.sleep(10000);

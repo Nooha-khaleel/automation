@@ -2,27 +2,27 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-13T12:55:11 IST" name="Default suite" finished-at="2023-12-13T12:55:16 IST" duration-ms="4523">
+  <suite started-at="2023-12-20T13:27:07 IST" name="Default suite" finished-at="2023-12-20T13:27:26 IST" duration-ms="18523">
     <groups>
     </groups>
-    <test started-at="2023-12-13T12:55:11 IST" name="Default test" finished-at="2023-12-13T12:55:16 IST" duration-ms="4523">
+    <test started-at="2023-12-20T13:27:07 IST" name="Default test" finished-at="2023-12-20T13:27:26 IST" duration-ms="18523">
       <class name="testpkg.Automationtest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testpkg.Automationtest@121314f7]" started-at="2023-12-13T12:55:11 IST" name="setup" finished-at="2023-12-13T12:55:16 IST" duration-ms="4459" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testpkg.Automationtest@121314f7]" started-at="2023-12-20T13:27:07 IST" name="setup" finished-at="2023-12-20T13:27:26 IST" duration-ms="18432" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test()[pri:0, instance:testpkg.Automationtest@121314f7]" started-at="2023-12-13T12:55:16 IST" name="test" finished-at="2023-12-13T12:55:16 IST" duration-ms="26" status="FAIL">
-          <exception class="java.io.FileNotFoundException">
+        <test-method signature="test()[pri:0, instance:testpkg.Automationtest@121314f7]" started-at="2023-12-20T13:27:26 IST" name="test" finished-at="2023-12-20T13:27:26 IST" duration-ms="42" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA["C:\Users\91730\Desktop\automationdata.xlsx" (The filename, directory name, or volume label syntax is incorrect)]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: "C:\Users\91730\Desktop\automationdata.xlsx" (The filename, directory name, or volume label syntax is incorrect)
-at java.base/java.io.FileInputStream.open0(Native Method)
-at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
-at testpkg.Automationtest.test(Automationtest.java:29)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
+at pagepkg.Automationpage.search1(Automationpage.java:80)
+at testpkg.Automationtest.test(Automationtest.java:42)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,7 +53,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->

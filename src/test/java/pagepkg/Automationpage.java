@@ -10,17 +10,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class Automationpage 
 {
-protected WebDriver driver;
-//signup
-@FindBy(xpath="//*[@id=\"__next\"]/div[4]/div/div[2]/div/div/div[2]/input")
-WebElement mobilenumber;
-@FindBy(xpath="//*[@id=\"__next\"]/div[4]/div/div[2]/div/button/div")
-WebElement continuebtn;
+ WebDriver driver;
 
-//screenshot
+
+
 
 
 //search shoes
@@ -76,25 +73,6 @@ public Automationpage(WebDriver driver)
 
 }
 
-public void signup()
-{
-	//mobilenumber.sendKeys("7306166336");
-	
-}
-
-
-//wait forotp
-public void otp() throws Exception
-{
-	Thread.sleep(5000);
-}
-
-
-//continuebtn
-public void afterotp()
-{
-	continuebtn.click();
-}
 
 
 public void search1()
@@ -154,6 +132,13 @@ public void TakeScreenShot() throws Exception
     File SourceFile=scrShot.getScreenshotAs(OutputType.FILE);
     File DestFile=new File("/mavenproject/screenshot1.png");
     FileUtils.copyFile(SourceFile, DestFile);
+}
+public void titleverification()
+{
+	String Actualtitle = "https://www.meesho.com/";
+	String expectedtitle=driver.getTitle();
+	Assert.assertEquals(Actualtitle, expectedtitle);
+	
 }
 
 

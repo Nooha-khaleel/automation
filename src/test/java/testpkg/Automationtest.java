@@ -26,21 +26,7 @@ public void test() throws Exception
 	//Automationpage pg=new Automationpage(driver);
 	
 	
-	FileInputStream ob=new FileInputStream("\"C:\\Users\\91730\\Desktop\\automationdata.xlsx\"");
-	XSSFWorkbook wb=new XSSFWorkbook(ob);
-	XSSFSheet sh=wb.getSheet("Sheet1");
-	int row=sh.getLastRowNum();
 	
-	for(int i=1;i<=row;i++)
-	{
-		String mobilenumber=sh.getRow(i).getCell(0).getStringCellValue();
-		driver.navigate().refresh();
-		System.out.println("mobilenumber="+mobilenumber);
-		//String password=sh.getRow(i).getCell(1).getStringCellValue();
-		driver.navigate().refresh();
-		//System.out.println("password="+password);
-		
-		
 	//String actualtitle=driver.getTitle();
 	//if(actualtitle.equalsIgnoreCase(""))
 	//{
@@ -51,9 +37,7 @@ public void test() throws Exception
 		//System.out.println("failed");
 	//}
 	
-	ap.signup();
-	ap.otp();
-	ap.afterotp();
+	
 	
 	ap.search1();
 	ap.tasks1();
@@ -67,6 +51,7 @@ public void test() throws Exception
 	
 	ap.gotocart();
 	ap.TakeScreenShot();
+	ap.titleverification();
 
 }
 
@@ -74,5 +59,5 @@ public void test() throws Exception
 	
 	
  }
-}	
+	
 
